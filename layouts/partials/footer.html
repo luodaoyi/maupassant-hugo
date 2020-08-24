@@ -1,22 +1,22 @@
 <footer id="footer">
+    <p class="text-center text-muted">
+        <span id="busuanzi_container_site_pv" style="display: inline;">
+        本站总访问量<span id="busuanzi_value_site_pv">0</span>次
+        </span>
+        &nbsp;•&nbsp;
+        <span id="busuanzi_container_site_uv" style="display: inline;">
+        访客数<span id="busuanzi_value_site_uv">0</span>人次
+        </span>
+    </p>
     <div>
-        &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }} By {{ .Site.Author.name }}</a>
+        &copy; {{ now.Format "2006" }} <a href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a> |
+        Powered by <a href="https://gohugo.io/" target="_black" rel="nofollow">Hugo</a>
+        | <a href="https://www.flysnow.org/" target="_blank" rel="nofollow">Theme</a>  based on <a href="https://github.com/rujews/maupassant-hugo" target="_blank" rel="nofollow">maupassant</a>
         {{ if .Site.Params.beian }}
         | <a rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/">{{.Site.Params.beian}}</a>
         {{ end }}
     </div>
     <br />
-    <div>
-        <div class="github-badge">
-            <a href="https://gohugo.io/" target="_black" rel="nofollow"><span class="badge-subject">Powered by</span><span class="badge-value bg-blue">Hugo</span></a>
-        </div>
-        <div class="github-badge">
-            <a href="https://www.flysnow.org/" target="_black"><span class="badge-subject">Design by</span><span class="badge-value bg-brightgreen">飞雪无情</span></a>
-        </div>
-        <div class="github-badge">
-            <a href="https://github.com/flysnow-org/maupassant-hugo" target="_black"><span class="badge-subject">Theme</span><span class="badge-value bg-yellowgreen">Maupassant</span></a>
-        </div>
-    </div>
 </footer>
 
 {{ if .IsPage }}
@@ -123,7 +123,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
     
     {{- if .Site.Params.fancybox -}}
-        <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
     {{- end -}}
 {{ end }}
 
